@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,18 +39,10 @@ public class SubPageContorller {
 	
 	@PostMapping("subPage/information")
 	public String information(
-			@RequestParam(value = "name") String name,
-			@RequestParam(value = "email") String email
 			) {
 		
 		
-		
-		log.debug("이름 : ", name);
-		log.debug("이름 : ", email);
-		log.debug("이름 : ", name);
-		log.debug("이름 : ", name);
-		
-		
+	
 		
 
 		
