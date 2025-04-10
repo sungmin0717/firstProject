@@ -4,15 +4,21 @@ import org.springframework.stereotype.Controller;
 
 import admin.board.firstProject.subPage.service.SubPageService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
 @Controller
 @RequiredArgsConstructor
+@Slf4j
 public class SubPageContorller {
+	
+	
 
 	private final SubPageService service;
 	
@@ -28,6 +34,33 @@ public class SubPageContorller {
 		return ("subPage/subPage");
 	}
 	
+	
+	
+	@PostMapping("subPage/information")
+	public String information(
+			@RequestParam(value = "name") String name,
+			@RequestParam(value = "email") String email
+			) {
+		
+		
+		
+		log.debug("이름 : ", name);
+		log.debug("이름 : ", email);
+		log.debug("이름 : ", name);
+		log.debug("이름 : ", name);
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		return"redirect:/";
+		
+	}
 	
 	
 	
