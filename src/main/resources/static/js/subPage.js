@@ -59,15 +59,24 @@ btn.addEventListener('click', (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      name: name,
-      email: email,
-      phon: phon
+      studentName: name,
+      studentEmail: email,
+      studentTel: phon
     })
 
-  }).then(res => {
-    if (res.ok) {
-      // 처리 성공
-    }
+  })
+  .then(response => response.text())
+  .then(data => {
+    console.log(data);
+    
+      // alert(data.message);
+
+
+
+
+    /*   if (data.message === "접수 완료되셨습니다") {
+          window.location.href = "/"; // 성공 시 홈으로 이동
+      } */
   })
 
 

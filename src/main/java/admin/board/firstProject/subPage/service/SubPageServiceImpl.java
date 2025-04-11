@@ -4,9 +4,11 @@ import org.springframework.stereotype.Service;
 
 import admin.board.firstProject.subPage.mapper.SubPageMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class SubPageServiceImpl implements SubPageService {
 
 	private final SubPageMapper mapper;
@@ -17,6 +19,7 @@ public class SubPageServiceImpl implements SubPageService {
 		
 		
 		int result = mapper.duplication(phon);
+		
 		
 		return result;
 	}

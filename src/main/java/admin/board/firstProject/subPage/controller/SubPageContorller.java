@@ -49,18 +49,17 @@ public class SubPageContorller {
 		String message = null;
 		String path = null;
 		
-		log.debug(informationDto.getName());
-		log.debug(informationDto.getEmail());
-		log.debug(informationDto.getPhon());
+		log.debug(informationDto.getStudentName());
+		log.debug(informationDto.getStudentEmail());
+		log.debug(informationDto.getStudentTel());
 
-		String name = informationDto.getName();
-		String email = informationDto.getEmail();
-		String phon = informationDto.getPhon();
+		String name = informationDto.getStudentName();
+		String email = informationDto.getStudentEmail();
+		String phon = informationDto.getStudentTel();
 		
 		//이메일 중복일때 return
 		int phonDuplication = service.duplication(phon);
 
-		log.debug("중복 성공 여부 : ",phonDuplication);
 		
 		
 		
@@ -68,23 +67,19 @@ public class SubPageContorller {
 		//0일떄 중복이메일 존재하지않음.
 		if(phonDuplication == 1) {
 			//중복이 존재해 메시지,리다이렉트 등록 실패.
-			message = "접수하신 이메일입니다.";
+			message = "접수하신 이메일이 존재합니다.";
 			path = "/";
 		}else {
 			//0일떄는
 			//JS 정규표현식 가공후 insert
 			int result = service.information(name, email, phon);
 			
-			log.debug("insert 성공 여부 : ", result);
 			message = "접수 완료되셨습니다.";
-			path = "/";
+			path = "/subPage";
 		}
 		
 		ra.addFlashAttribute("message", message);
-		
-		
-		return"redirect:" + path;
-		
+		return path;
 	}
 	
 	

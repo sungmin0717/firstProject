@@ -11,9 +11,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class InformationDto {
 
-	String name = null;
-	String email = null;
-	String phon = null;
-	
+	String studentName;
+	String studentEmail;
+	String studentTel;
 	
 }

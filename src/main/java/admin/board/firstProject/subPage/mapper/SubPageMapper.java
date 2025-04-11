@@ -1,6 +1,10 @@
 package admin.board.firstProject.subPage.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+
+
 
 @Mapper
 public interface SubPageMapper {
@@ -9,8 +13,13 @@ public interface SubPageMapper {
 	int duplication(String phon);
 	
 	
+	
+	
 	//insert 작업
-	int informationInsert(String name, String email, String phon);
+	int informationInsert(
+			@Param ("name") String name, 
+			@Param ("email") String email, 
+			@Param ("phon") String phon);
 
 
 	
