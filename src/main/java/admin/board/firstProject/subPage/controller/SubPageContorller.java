@@ -2,7 +2,7 @@ package admin.board.firstProject.subPage.controller;
 
 import org.springframework.stereotype.Controller;
 
-import admin.board.firstProject.subPage.InformationDto.InformationDto;
+import admin.board.firstProject.subPage.dto.InformationDto;
 import admin.board.firstProject.subPage.service.SubPageService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -60,26 +60,22 @@ public class SubPageContorller {
 		//이메일 중복일때 return
 		int phonDuplication = service.duplication(phon);
 
-		
+		String flag = null;
 		
 		
 		//1일떄 중복이메일 존재 
 		//0일떄 중복이메일 존재하지않음.
 		if(phonDuplication == 1) {
 			//중복이 존재해 메시지,리다이렉트 등록 실패.
-			message = "접수하신 이메일이 존재합니다.";
-			path = "/";
+			flag = "f";
 		}else {
 			//0일떄는
 			//JS 정규표현식 가공후 insert
 			int result = service.information(name, email, phon);
-			
-			message = "접수 완료되셨습니다.";
-			path = "/subPage";
+			flag = "t";
 		}
 		
-		ra.addFlashAttribute("message", message);
-		return path;
+		return flag;
 	}
 	
 	

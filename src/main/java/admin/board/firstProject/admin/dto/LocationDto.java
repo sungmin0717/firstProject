@@ -1,4 +1,4 @@
-package admin.board.firstProject.subPage.InformationDto;
+package admin.board.firstProject.admin.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class InformationDto {
-
-	String studentName;
-	String studentEmail;
-	String studentTel;
+public class LocationDto {
+	// 위도 경도
+	int locationNo;
+	String latitudeNo;
+	String longitudeNo;
 	
 }

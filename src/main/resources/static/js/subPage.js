@@ -69,22 +69,18 @@ btn.addEventListener('click', (e) => {
   .then(data => {
     console.log(data);
     
-      // alert(data.message);
-
-
-
-
-    /*   if (data.message === "접수 완료되셨습니다") {
-          window.location.href = "/"; // 성공 시 홈으로 이동
-      } */
+    if (data === "f") {
+      alert("신청되어있는 상태입니다.");
+      return;
+    } else {
+      alert("정보 등록 성공.")
+      location.href = "/";
+    }
   })
 
 
 
 })
-
-
-
 
 const logo = document.querySelector('.logo');
 logo.addEventListener('click', () => {
