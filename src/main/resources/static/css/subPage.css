@@ -7,7 +7,8 @@ body {
   background-color: #D9D9D9;
   height: 100vh;
 }
-p{
+
+p {
   margin: 0;
 }
 
@@ -29,7 +30,7 @@ p{
   flex-direction: row;
   height: 16%;
   font-size: 1.4vw;
-  gap: 2vw;
+  gap: 5vw;
   padding: 0.8vw;
 }
 
@@ -42,12 +43,14 @@ p{
 .box-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  height: 90%;
+  align-items: center;
+  height: 84%;
   justify-content: flex-start;
-  padding: 3vw;
+  margin: 2vw;
+  gap: 2vw;
 }
-.input{
+
+.input {
   outline: none;
   border: none;
   border-bottom: 0.1vw solid #D9D9D9;
@@ -55,4 +58,43 @@ p{
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
   width: 20vw;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.input-box>p {
+  font-size: 1.1vw;
+}
+.btn-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-box > button {
+  border: none;
+  background-color: #D9D9D9;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 2vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+
+
+.logo{
+  cursor: pointer;
+}
+
+
+.input-box > p:last-child{
+  font-size: 0.7vw;
 }

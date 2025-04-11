@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,27 +17,45 @@
 
   <div class="box">
     <div class="box-header">
-      <img src="../images/logo.png">
+      <img src="../images/logo.png" class="logo">
       <p>상담 예약하기</p>
     </div>
+
 
     <div class="box-body">
 
 
-
-      <div>
-        <p>이메일</p>
-        <input type="text" textarea="이메일" class="email input">
+      <div class="input-box">
+        <p>이름</p>
+        <input type="text" textarea="이메일" class="input name" name="name">
       </div>
 
-      
-      
+      <div class="input-box">
+        <p>이메일</p>
+        <input type="text" textarea="이메일" class="input email" name="email">
+      </div>
+
+      <div class="input-box">
+        <p>전화번호</p>
+        <input type="text" textarea="전화번호" class="input phon" name="phon">
+        <p>(-) 제외하고 작성해주세요.</p>
+      </div>
+
+
+      <div class="btn-box">
+        <button class="btn">예약하기</button>
+      </div>
     </div>
 
   </div>
 
 
-  
+
+
+
+
+  <script src="../js/subPage.js">
+  </script>
 </body>
 
 
