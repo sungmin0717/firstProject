@@ -93,3 +93,8 @@ p {
 .logo{
   cursor: pointer;
 }
+
+
+.input-box > p:last-child{
+  font-size: 0.7vw;
+}

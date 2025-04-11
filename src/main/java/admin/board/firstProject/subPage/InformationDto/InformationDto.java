@@ -13,7 +13,7 @@ public class InformationDto {
 
 	String name = null;
 	String email = null;
-	int phon = 0;
+	String phon = null;
 	
 	
 }
