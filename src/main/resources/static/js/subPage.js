@@ -44,6 +44,10 @@ btn.addEventListener('click', (e) => {
     blockTransmission;
     alert("휴대폰 정보를 잘못입력하셨습니다.");
     return;
+  } else if (phon == "01012341234"){
+    blockTransmission;
+    alert("잘못입력하셨습니다.");
+    return;
   }
 
   /* 정보 확인 */
@@ -72,7 +76,7 @@ btn.addEventListener('click', (e) => {
     if (data === "f") {
       alert("신청되어있는 상태입니다.");
       return;
-    } else {
+    } else if (data == "t"){
       alert("정보 등록 성공.")
       location.href = "/";
     }
