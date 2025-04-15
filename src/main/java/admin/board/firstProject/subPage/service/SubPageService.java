@@ -1,5 +1,7 @@
 package admin.board.firstProject.subPage.service;
 
+import java.util.concurrent.CompletableFuture;
+
 public interface SubPageService {
 
 	/** 이메일 중복 확인
@@ -16,6 +18,7 @@ public interface SubPageService {
 	 * @param phon
 	 * @return
 	 */
-	int information(String name, String email, String phon);
+	CompletableFuture<Integer> information(String name, String email, String phon, String htmlName);
+
 
 }

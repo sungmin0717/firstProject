@@ -4,6 +4,8 @@
 const btn = document.querySelector('.btn');
 
 
+const check = document.querySelector('.check');
+
 
 
 btn.addEventListener('click', (e) => {
@@ -48,6 +50,10 @@ btn.addEventListener('click', (e) => {
     blockTransmission;
     alert("잘못입력하셨습니다.");
     return;
+  }else if (check.checked === false){
+    blockTransmission;
+    alert("필요사항을 체크해주세요.");
+    return;
   }
 
   /* 정보 확인 */
@@ -71,7 +77,6 @@ btn.addEventListener('click', (e) => {
   })
   .then(response => response.text())
   .then(data => {
-    console.log(data);
     
     if (data === "f") {
       alert("신청되어있는 상태입니다.");
