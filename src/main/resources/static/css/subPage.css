@@ -69,6 +69,8 @@ p {
 .input-box>p {
   font-size: 1.1vw;
 }
+
+
 .btn-box{
   display: flex;
   flex-direction: row;
@@ -97,4 +99,15 @@ p {
 
 .input-box > p:last-child{
   font-size: 0.7vw;
+}
+
+.check-box{
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  font-size: 1.1vw;
+}
+.check{
+  width: 0.8vw;
+  height: 0.8vw;
 }
