@@ -28,7 +28,7 @@ body {
   cursor: pointer;
 }
 
-.div-show{
+.div-show {
   opacity: 0;
   transition: all 0.5s;
 }
@@ -63,7 +63,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.dot{
+
+.dot {
   width: 0.5vw;
   height: 0.5vw;
   border-radius: 50%;
@@ -73,7 +74,7 @@ body {
   cursor: pointer;
 }
 
-.banner-dot-color   {
+.banner-dot-color {
   background-color: #ec8282;
 }
 
@@ -106,12 +107,15 @@ body {
 
 
 .student-text-box {
+  display: flex;
   min-width: 20vw;
   height: 87%;
   border-radius: 2vw;
   flex-shrink: 0;
   box-shadow: 1px 1px 2px 2px #555555;
   background-color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 .tow-box-second {
@@ -200,10 +204,16 @@ body {
 .click-object {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 10vw;
   height: 80%;
   border-radius: 2vw;
   background-color: white;
+}
+
+.click-object>p {
+  font-size: 1vw;
+  font-weight: bold;
 }
 
 .img-1 {
@@ -308,12 +318,12 @@ body {
   }
 
   .tow-box-first,
-  .tow-box-second
-  {
+  .tow-box-second {
     flex-direction: column;
     height: auto;
   }
-  .tow-box{
+
+  .tow-box {
     display: flex;
     background-color: #ffffff;
     flex-direction: row;
@@ -359,7 +369,8 @@ body {
     height: 8vw;
   }
 
-  .img-1, .img-2 {
+  .img-1,
+  .img-2 {
     width: 100%;
     object-fit: cover;
   }
