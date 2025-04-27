@@ -73,9 +73,9 @@ let observer = new IntersectionObserver((e) => {
 
   e.forEach((a) => {
     if(a.isIntersecting){
-      
       a.target.style.opacity = 1;
       a.target.style.transition = '0.5s ease-in-out';
+      a.target.style.transform = 'translateY(0) scaleY(1)';
     }else{
       a.target.style.opacity = 0;
     }
