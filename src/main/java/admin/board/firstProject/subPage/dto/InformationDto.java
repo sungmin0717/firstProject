@@ -11,8 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class InformationDto {
 
+	String studentNo;
 	String studentName;
 	String studentEmail;
 	String studentTel;
+	String studentTf;
+	
 	
 }

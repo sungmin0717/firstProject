@@ -6,20 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-
-  <link rel="stylesheet" href="../css/admin/adminLogin.css">
+  
+  <link rel="stylesheet" href="../css/admin/adminPage.css">
 </head>
 
 
 <body>
+  <p th:text="${result}"></p>
+  <div class="background">
+    <p class="title">상담 신청 내역</p>
+    <form action="/admin/search" method="post">
+      <div class="search">
+        <input type="text" name="input" placeholder="전화번호 입력해주세요."> <button class="btn">검색</button>
+      </div>
+    </form>
+
+      <div class="consultation">
+        <p>상담 미완료 정렬</p>
+      </div>
+
+    <table style="table-layout: fixed; width: 100%" border="1" class="table">
+      <colgroup>
+      <col style="width: 10%">
+      <col style="width: 10%">
+      <col style="width: 45%">
+      <col style="width: 25%">
+      <col style="width: 10%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>신청번호</th>
+          <th>신청자</th>
+          <th>신청자 이메일</th>
+          <th>신청자 전화번호</th>
+          <th>상담 여부</th>
+      </thead>
+
+      <tbody>
+        <tr th:each="userList : ${userList}">
+          <td th:text="${userList.studentNo}" class="studentNo"></td>
+          <td th:text="${userList.studentName}"></td>
+          <td th:text="${userList.studentEmail}"></td>
+          <td th:text="${userList.studentTel}"></td>
+          <td>
+            <select name="select" th:value="${userList.studentTf}" class="select">
+              <option value="F" th:selected="${userList.studentTf == 'F'}">미완료</option>
+              <option value="T" th:selected="${userList.studentTf == 'T'}">완료</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 
 
 
-
-
-
+  <script src="../js/adminPage.js"></script>
 </body>
 
 </html>
