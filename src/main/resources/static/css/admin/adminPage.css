@@ -1,0 +1,91 @@
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
+
+.title{
+  font-size: 1.5svw;
+
+}
+
+.background{
+  display: flex;
+  flex-direction: column;
+
+  width: 840px;
+  height: auto;
+  max-width: 50vw;
+  min-width: 30vw;
+  min-height: 30vw;
+
+  background-color: white;
+  align-items: center;
+}
+
+
+/* -------------- */
+th{
+  font-size: 0.8vw;
+}
+
+td{
+  text-align: center;
+  font-size: 1vw;
+}
+
+.select{
+  width: 100%;
+  height: 2vw;
+  font-size: 0.8vw;
+  border: 0.1vw solid black;
+
+}
+
+.consultation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2vw solid black;
+  border-radius: 0.5vw;
+  height: 2vw;
+  cursor: pointer;
+}
+
+
+.search{
+  display:flex;
+  flex-direction: row;
+  padding: 1vw;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.search > input{
+  border: none;
+  outline: none;
+  border-bottom: 0.1vw solid black;
+  font-size: 0.8vw;
+  width: 10vw;
+  height: 1.5vw;
+}
+.search > button{
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  border-radius: 1vw;
+  align-items: center;
+  border: 0.1vw solid black;
+  width: 3vw;
+  height: 2vw;
+  font-size: 0.7vw;
+  background: none;
+  cursor: pointer;
+}
